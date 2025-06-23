@@ -1,0 +1,13 @@
+@model Patient
+<h2>Patient Details</h2>
+<p><strong>ID:</strong> @Model.Id</p>
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>City:</strong> @Model.City</p>
+<p><strong>Age:</strong> @Model.Age</p>
+<p><strong>Gender:</strong> @Model.Gender</p>
+<p><strong>Height:</strong> @Model.Height</p>
+<p><strong>Weight:</strong> @Model.Weight</p>
+<p><strong>BMI:</strong> @Model.BMI</p>
+<p><strong>Verdict:</strong> @Model.Verdict</p>
+<a href="/Patient/Edit/@Model.Id">Edit</a> |
+<a href="/Patient/Delete/@Model.Id">Delete</a>

@@ -1,0 +1,61 @@
+@model List<Patient>
+
+<style>
+    .patient-table, 
+    .patient-table th, 
+    .patient-table td {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+
+    .patient-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .patient-table th, 
+    .patient-table td {
+        padding: 8px;
+    }
+</style>
+
+<h2>Patient List</h2>
+<a href="/Patient/Create">Add New</a>
+
+<table class="patient-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Height (m)</th>
+            <th>Weight (kg)</th>
+            <th>BMI</th>
+            <th>Verdict</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.City</td>
+                <td>@p.Age</td>
+                <td>@p.Gender</td>
+                <td>@p.Height</td>
+                <td>@p.Weight</td>
+                <td>@p.BMI</td>
+                <td>@p.Verdict</td>
+                <td>
+                    <a href="/Patient/Details/@p.Id">View</a> |
+                    <a href="/Patient/Edit/@p.Id">Edit</a> |
+                    <a href="/Patient/Delete/@p.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
