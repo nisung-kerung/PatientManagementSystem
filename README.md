@@ -28,5 +28,5 @@ This is a fully functional Patient Management System web application developed u
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/PatientManagementSystem.git
+git clone https://github.com/nisung-kerung/PatientManagementSystem.git
 cd PatientManagementSystem
